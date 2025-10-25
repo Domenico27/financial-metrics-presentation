@@ -258,6 +258,13 @@ export default function PrintInvestmentPlan() {
           </tbody>
         </table>
       </div>
+
+      {/* Watermark per la stampa */}
+      <div className="text-center mt-8 pt-4 border-t">
+        <div className="text-sm text-gray-500">
+          Creato da Mastromarino Domenico, consulente finanziario indipendente, per Antonio Cozzupoli
+        </div>
+      </div>
     </div>
   )
 }

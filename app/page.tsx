@@ -83,6 +83,9 @@ export default function Presentation() {
             <div className="text-sm text-muted-foreground">
               {currentSlide + 1} / {slides.length}
             </div>
+            <div className="text-xs text-muted-foreground">
+              Creato da Mastromarino Domenico, consulente finanziario indipendente, per Antonio Cozzupoli
+            </div>
           </div>
 
           <Button

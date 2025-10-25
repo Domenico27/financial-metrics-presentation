@@ -410,6 +410,15 @@ export default function PrintView() {
           </div>
         </div>
       </div>
+
+      {/* Watermark per la stampa */}
+      <div className="print-indicator">
+        <div className="compact-print text-center">
+          <div className="text-sm text-gray-500 border-t pt-4 mt-8">
+            Creato da Mastromarino Domenico, consulente finanziario indipendente, per Antonio Cozzupoli
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
