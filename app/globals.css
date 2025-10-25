@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Stili per la stampa */
+@media print {
+  /* Nascondi elementi di navigazione */
+  nav,
+  header,
+  footer,
+  .navigation {
+    display: none !important;
+  }
+
+  /* Rimuovi sfondi colorati e ombre */
+  body,
+  .bg-gradient-to-b,
+  .shadow-lg {
+    background: white !important;
+    box-shadow: none !important;
+  }
+
+  /* Assicurati che ogni slide inizi su una nuova pagina */
+  .print-indicator {
+    page-break-inside: avoid !important;
+    page-break-after: always !important;
+    break-inside: avoid !important;
+    break-after: page !important;
+    display: block !important;
+    position: relative !important;
+  }
+
+  /* Assicurati che le card non vengano divise */
+  .card,
+  .card-content {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Assicurati che i titoli non vengano separati dal loro contenuto */
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* Migliora la leggibilità del testo */
+  p,
+  li {
+    font-size: 11pt !important;
+  }
+
+  h1 {
+    font-size: 18pt !important;
+    margin-bottom: 10pt !important;
+  }
+
+  h2 {
+    font-size: 14pt !important;
+    margin-bottom: 8pt !important;
+  }
+
+  h3 {
+    font-size: 12pt !important;
+    margin-bottom: 6pt !important;
+  }
+
+  /* Riduci i margini e i padding per ottimizzare lo spazio */
+  .p-8,
+  .p-6,
+  .p-4 {
+    padding: 8pt !important;
+  }
+
+  .gap-6,
+  .gap-4 {
+    gap: 8pt !important;
+  }
+
+  .my-4,
+  .my-2 {
+    margin-top: 6pt !important;
+    margin-bottom: 6pt !important;
+  }
+
+  .mb-6,
+  .mb-4 {
+    margin-bottom: 8pt !important;
+  }
+
+  .mb-2 {
+    margin-bottom: 4pt !important;
+  }
+
+  /* Mostra elementi solo per la stampa */
+  .print-only {
+    display: block !important;
+  }
+
+  /* Nascondi elementi solo per lo schermo */
+  .screen-only {
+    display: none !important;
+  }
+
+  /* Stile compatto per la stampa */
+  .compact-print {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Stili per la visualizzazione a schermo */
+@media screen {
+  .print-only {
+    display: none !important;
+  }
+}
+
